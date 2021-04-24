@@ -1,8 +1,12 @@
 var startBtn = document.getElementById('startBtn');
+var questionText = document.getElementById('textBox');
 var btnOne = document.getElementById('btnOne');
 var btnTwo = document.getElementById('btnTwo');
 var btnThree = document.getElementById('btnThree');
 var btnFour = document.getElementById('btnFour');
+var btnAns = document.getElementsByClassName('questionBtn');
+var answer = '';
+var questionNumber = 0;
 
 
 
@@ -45,8 +49,18 @@ var questionBank = [{
 
 startBtn.addEventListener('click', function() {
     showbutton();
+    questionMake();
 })
 
+for (let i = 0; i < btnAns.length; i++) {
+    btnAns[i].addEventListener('click', function(){
+        selection = 
+        questionCheck();
+    });
+}
+ 
+    
+btnAns
 function showbutton() {
     startBtn.style.display = 'none';
     btnOne.style.display = 'flex';
@@ -55,6 +69,34 @@ function showbutton() {
     btnFour.style.display = 'flex';
 }
 
-function questionBank() {
+function questionMake() {
+    if (questionNumber < 5) {
+        questionText.textContent = questionBank[questionNumber].questionIs;
+        btnOne.textContent = questionBank[questionNumber].ansOne;
+        btnTwo.textContent = questionBank[questionNumber].ansTwo;
+        btnThree.textContent = questionBank[questionNumber].ansThree;
+        btnFour.textContent = questionBank[questionNumber].ansFour;
+    }
+     }
+
+function questionCheck() {
+    document.getElementById('btnOne').onclick = answer;
+    document.getElementById('btnTwo').onclick = answer;
+    document.getElementById('btnThree').onclick = answer;
+    document.getElementById('btnFour').onclick = answer;
+    function answer(clicked) {
+        console.log(this.id);
+    }
     
+
+
+
+
+    questionNumber++;
+    
+    
+
+    questionMake();
+
 }
+
