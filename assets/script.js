@@ -11,6 +11,10 @@ var timerLeft = 75;
 var theAnswer = '';
 var questionNumber = 0;
 var result = document.getElementById('result');
+var endScore = document.getElementById('endScore');
+var quizBox = document.getElementById('quizBox');
+var endGame = document.getElementById('endGame');
+var timeDisplay = document.getElementById('timer');
 
 
 
@@ -54,7 +58,7 @@ var questionBank = [{
 startBtn.addEventListener('click', function() {
     showbutton();
     questionMake();
-    setInterval(timer, 1000);
+    countDown = setInterval(timer, 1000);
 })
 
 for (let i = 0; i < btnAns.length; i++) {
@@ -65,7 +69,7 @@ for (let i = 0; i < btnAns.length; i++) {
 }
  
     
-btnAns
+
 function showbutton() {
     startBtn.style.display = 'none';
     btnOne.style.display = 'flex';
@@ -90,17 +94,14 @@ function questionMake() {
 function questionCheck() {
     
     if (questionBank[questionNumber].correctAns == answer) {
-        console.log('first half' + btnFive.value);
-        console.log('second half ' + answer);
         result.textContent = 'Correct, :)'
     } else {
-        console.log(`WRONG`);
-        console.log('first half' + questionBank[questionNumber].correctAns);
         result.textContent = "Wrong, :(";
         penalty();
     }   
     
     questionNumber++;
+    checkTime();
     
     
     
@@ -117,8 +118,29 @@ function choice(clicked) {
 function timer() {
     timerLeft--;
     timeCounter.textContent = timerLeft;
+    checkTime();
 }
 
 function penalty() {
     timerLeft = timerLeft - 10;
+}
+
+function checkTime() {
+    if (questionNumber >= 5) {
+        quizBox.style.display = 'none';
+        endGame.style.display = "flex";
+        timeDisplay.style.display = 'none';
+        endScore.textContent = timerLeft;
+        clearInterval(countDown); 
+        return      
+        
+
+    } if (timerLeft <= 0) {
+        quizBox.style.display = 'none';
+        endGame.style.display = "flex";
+        timeDisplay.style.display = 'none';
+        endScore.textContent = timerLeft;
+        clearInterval(countDown);
+        return
+    }     
 }

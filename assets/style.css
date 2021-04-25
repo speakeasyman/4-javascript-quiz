@@ -11,3 +11,6 @@ button {
 .questionBtn {
     display: none;
 }
+#endGame {
+    display: none;
+}
