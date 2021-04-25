@@ -10,6 +10,7 @@ var timeCounter = document.getElementById('timeCounter');
 var timerLeft = 75;
 var theAnswer = '';
 var questionNumber = 0;
+var result = document.getElementById('result');
 
 
 
@@ -91,11 +92,12 @@ function questionCheck() {
     if (questionBank[questionNumber].correctAns == answer) {
         console.log('first half' + btnFive.value);
         console.log('second half ' + answer);
-        console.log(`this is correct`);
+        result.textContent = 'Correct, :)'
     } else {
         console.log(`WRONG`);
         console.log('first half' + questionBank[questionNumber].correctAns);
-        console.log('second half ' + answer);
+        result.textContent = "Wrong, :(";
+        penalty();
     }   
     
     questionNumber++;
@@ -115,4 +117,8 @@ function choice(clicked) {
 function timer() {
     timerLeft--;
     timeCounter.textContent = timerLeft;
+}
+
+function penalty() {
+    timerLeft = timerLeft - 10;
 }
