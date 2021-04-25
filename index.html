@@ -8,7 +8,8 @@
     <title>Javascript Quiz</title>
 </head>
 <header>
-    <p id='highscores'>View Highscores</p>
+    <a href="./assets/index2.html">View Highscores</a>
+    <!-- <p id='highscores'>View Highscores</p> -->
     <p id='timer'>Time: <span id="timeCounter">75</span></p>
 </header>
 <body>
@@ -27,6 +28,9 @@
     <div id="endGame">
         <h1>All done!</h1>
         <p>Your final score is <span id="endScore"></span>.</p>
+        <label>Enter initials:</label>
+        <input type="text" id="initialsEnt">
+        <button class="submit" id="submit" onclick="save_data()">Submit</button>
     </div>
     
 </body>

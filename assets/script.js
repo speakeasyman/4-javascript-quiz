@@ -15,6 +15,8 @@ var endScore = document.getElementById('endScore');
 var quizBox = document.getElementById('quizBox');
 var endGame = document.getElementById('endGame');
 var timeDisplay = document.getElementById('timer');
+var btnSubmit = document.getElementById('submit');
+var initialsEnt = document.getElementById('initialsEnt');
 
 
 
@@ -67,7 +69,18 @@ for (let i = 0; i < btnAns.length; i++) {
         questionCheck();
     });
 }
- 
+btnSubmit.addEventListener('click', function(){
+ var input = document.getElementById('submit').value;
+ console.log(input);
+ localStorage.setItem('server', input);
+    // scoreSave = [{
+    //     initials: input.val(),
+    //     score: timerLeft,
+    // }];
+    // console.log(scoreSave);
+    // localStorage.setItem('highscores', JSON.stringify(scoreSave));
+    
+})
     
 
 function showbutton() {
