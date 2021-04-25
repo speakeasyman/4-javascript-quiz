@@ -6,6 +6,8 @@ var btnThree = document.getElementById('btnThree');
 var btnFour = document.getElementById('btnFour');
 var btnFive = document.getElementById('btnFive');
 var btnAns = document.getElementsByClassName('questionBtn');
+var timeCounter = document.getElementById('timeCounter');
+var timerLeft = 75;
 var theAnswer = '';
 var questionNumber = 0;
 
@@ -51,6 +53,7 @@ var questionBank = [{
 startBtn.addEventListener('click', function() {
     showbutton();
     questionMake();
+    setInterval(timer, 1000);
 })
 
 for (let i = 0; i < btnAns.length; i++) {
@@ -93,12 +96,7 @@ function questionCheck() {
         console.log(`WRONG`);
         console.log('first half' + questionBank[questionNumber].correctAns);
         console.log('second half ' + answer);
-    }
-    
-    
-    
-    
-    
+    }   
     
     questionNumber++;
     
@@ -112,4 +110,9 @@ function questionCheck() {
 function choice(clicked) {
        answer = clicked
     console.log(clicked);
+}
+
+function timer() {
+    timerLeft--;
+    timeCounter.textContent = timerLeft;
 }
