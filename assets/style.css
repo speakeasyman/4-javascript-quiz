@@ -6,14 +6,47 @@ header {
 button {
     display: flex;
     flex-direction: column;
+    background-color: purple;
+    color: white;
 }
 
 .questionBtn {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4px;
 }
 #endGame {
     display: none;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 .buttons {
     display: flex;
+    justify-content: center;
+    
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+
+}
+.small {
+    width: auto;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+.margin5 {
+    margin: 5px;
+}
+ol {
+    flex-direction: column;
+    width: auto;
+    margin-left: 45%;
+    margin-right: 45%;
+    text-align: center;
+    justify-content: center;
+    
 }

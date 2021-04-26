@@ -13,24 +13,27 @@
     <p id='timer'>Time: <span id="timeCounter">75</span></p>
 </header>
 <body>
-    <div id='quizBox'>
-        <h1 class="start">Coding Quize Challenge</h1>
-        <p id="textBox">Try to answer the following code-related questions within the time limit. 
+    <div id='quizBox' >
+        <h1 class="start center">Coding Quiz Challenge</h1>
+        <p id="textBox" class="center">Try to answer the following code-related questions within the time limit. 
             Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
-        <button class="start" id="startBtn">Start Quiz</button>
-        <button class="questionBtn" id = "btnOne" onclick="choice(this.id)"></button>
-        <button class="questionBtn" id = "btnTwo" onclick="choice(this.id)"></button>
-        <button class="questionBtn" id = "btnThree" onclick="choice(this.id)"></button>
-        <button class="questionBtn" id = "btnFour" onclick="choice(this.id)"></span></button>
-        <button class="questionBtn" id = "btnFive" onclick="choice(this.id)"></span></button>
-        <p id="result"></p>
+        <div class="center">
+
+            <button class="start center" id="startBtn">Start Quiz</button>
+            <button class="questionBtn" id = "btnOne" onclick="choice(this.id)"></button>
+            <button class="questionBtn" id = "btnTwo" onclick="choice(this.id)"></button>
+            <button class="questionBtn" id = "btnThree" onclick="choice(this.id)"></button>
+            <button class="questionBtn" id = "btnFour" onclick="choice(this.id)"></span></button>
+            <button class="questionBtn" id = "btnFive" onclick="choice(this.id)"></span></button>
+        </div>
+            <p class='center' id="result"></p>
     </div>
     <div id="endGame">
         <h1>All done!</h1>
-        <p>Your final score is <span id="endScore"></span>.</p>
-        <label>Enter initials:</label>
-        <input type="text" id="initialsEnt">
-        <button class="submit" id="submit">Submit</button>
+        <p> Your final score is <span id="endScore"></span>.</p>
+        <label class="margin5">Enter initials:</label>
+        <input class='small' type="text" id="initialsEnt">
+        <button class="submit small" id="submit">Submit</button>
     </div>
     
 </body>
