@@ -21,7 +21,21 @@ The repo is located at: https://github.com/speakeasyman/4-javascript-quiz
 
 The page you see when you first open the webpage. <br>
 
-![Initial_Screen](./assets/screenshots/initial.PNG)
+![Initial_Screen](./assets/screenshots/initial.PNG) <br>
+
+The quiz in action. With four repsonses <br>
+
+![Question_Example](.assets/screenshots/questions.PNG)<br>
+
+The end screen after the quiz has completed
+
+![End_Screen](.assets/screenshots/end.PNG) <br>
+
+The High Score Screen <br>
+
+![High_Scores](.assets/screenshots/highscores.PNG)
+
+
 
 
 
