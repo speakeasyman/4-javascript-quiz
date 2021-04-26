@@ -14,3 +14,6 @@ button {
 #endGame {
     display: none;
 }
+.buttons {
+    display: flex;
+}

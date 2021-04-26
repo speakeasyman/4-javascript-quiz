@@ -1,3 +1,8 @@
+var clearBtn = document.getElementById('clear');
+var returnBtn = document.getElementById('return');
+
+
+
 function loadScores() {
         scoreTotal = JSON.parse(localStorage.getItem('highScores'));
         console.log(scoreTotal);
@@ -10,3 +15,12 @@ function loadScores() {
             
         }
 };
+
+clearBtn.addEventListener('click', function() {
+    localStorage.removeItem('highScores');
+    location.reload();
+});
+
+returnBtn.addEventListener('click', function() {
+   window.location.href = 'https://speakeasyman.github.io/4-javascript-quiz/';
+})
