@@ -1,4 +1,4 @@
-//Here are my variables graved from the DOM
+//Here are my variables grabbed from the DOM
 
 var startBtn = document.getElementById('startBtn');
 var questionText = document.getElementById('textBox');
@@ -79,6 +79,12 @@ btnSubmit.addEventListener('click', function(){
             initials: input,
             score: timerLeft,
         }]        
+    } else if (input === "") {
+        input = input.concat("Anonymous");
+        scoreSave = history.concat([{
+            initials: input,
+            score: timerLeft,
+        }])
     } else {
         scoreSave = history.concat([{
             initials: input,
