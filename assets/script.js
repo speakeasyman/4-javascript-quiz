@@ -95,6 +95,7 @@ btnSubmit.addEventListener('click', function(){
 
 
     localStorage.setItem('highScores', JSON.stringify(scoreSave));
+    window.location.href = 'https://speakeasyman.github.io/4-javascript-quiz/assets/index2.html';
     
 })
     
