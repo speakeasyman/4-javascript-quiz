@@ -85,8 +85,15 @@ btnSubmit.addEventListener('click', function(){
     }
     
     console.log(scoreSave);
+    scoreSave.sort(function(a,b){
+        var x = a.score;
+        var y = b.score;
+        if (x < y) {return 1;}
+        if (x > y) {return -1;}
+        return 0;
+    });
 
-    
+
     localStorage.setItem('highScores', JSON.stringify(scoreSave));
     
 })
@@ -166,4 +173,5 @@ function checkTime() {
         return
     }     
 }
+
 
