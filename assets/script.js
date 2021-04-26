@@ -70,15 +70,13 @@ for (let i = 0; i < btnAns.length; i++) {
     });
 }
 btnSubmit.addEventListener('click', function(){
- var input = document.getElementById('submit').value;
- console.log(input);
- localStorage.setItem('server', input);
-    // scoreSave = [{
-    //     initials: input.val(),
-    //     score: timerLeft,
-    // }];
-    // console.log(scoreSave);
-    // localStorage.setItem('highscores', JSON.stringify(scoreSave));
+ var input = document.getElementById('initialsEnt').value;
+    scoreSave = [{
+        initials: input,
+        score: timerLeft,
+    }];
+    console.log(scoreSave);
+    localStorage.setItem('highscores', JSON.stringify(scoreSave));
     
 })
     
