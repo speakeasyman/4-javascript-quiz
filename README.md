@@ -19,5 +19,9 @@ The repo is located at: https://github.com/speakeasyman/4-javascript-quiz
 
 6.0 In use:<br>
 
+The page you see when you first open the webpage. <br>
+
+![Initial_Screen](./assets/screenshots/initial.png)
+
 
 
