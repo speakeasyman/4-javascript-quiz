@@ -70,13 +70,24 @@ for (let i = 0; i < btnAns.length; i++) {
     });
 }
 btnSubmit.addEventListener('click', function(){
- var input = document.getElementById('initialsEnt').value;
-    scoreSave = [{
-        initials: input,
-        score: timerLeft,
-    }];
+    var input = document.getElementById('initialsEnt').value;
+    var history = JSON.parse(localStorage.getItem('highScores'));
+    if (history === null) {
+        scoreSave = [{
+            initials: input,
+            score: timerLeft,
+        }]        
+    } else {
+        scoreSave = history.concat([{
+            initials: input,
+            score: timerLeft,
+        }])
+    }
+    
     console.log(scoreSave);
-    localStorage.setItem('highscores', JSON.stringify(scoreSave));
+
+    
+    localStorage.setItem('highScores', JSON.stringify(scoreSave));
     
 })
     
@@ -155,3 +166,4 @@ function checkTime() {
         return
     }     
 }
+
