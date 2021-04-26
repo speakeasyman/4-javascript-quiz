@@ -25,15 +25,15 @@ The page you see when you first open the webpage. <br>
 
 The quiz in action. With four repsonses <br>
 
-![Question_Example](.assets/screenshots/questions.PNG)<br>
+![Question_Example](./assets/screenshots/questions.PNG)<br>
 
 The end screen after the quiz has completed
 
-![End_Screen](.assets/screenshots/end.PNG) <br>
+![End_Screen](./assets/screenshots/end.PNG) <br>
 
 The High Score Screen <br>
 
-![High_Scores](.assets/screenshots/highscores.PNG)
+![High_Scores](./assets/screenshots/highscores.PNG)
 
 
 
